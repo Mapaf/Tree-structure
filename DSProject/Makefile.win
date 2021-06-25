@@ -1,0 +1,91 @@
+# Project: DSProject-Parte8
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = commands.o fa_impressao.o z_arv.o z_arv_AVL.o z_arv_AVL_ED.o z_arvED.o z_arvEncED.o z_fila.o z_filaED.o z_tabelaSequencial.o z_tabelaSequencialED.o zz_lista1_q03.o zz_lista1_q04.o zz_lista1_q05.o zz_lista1_q06.o zz_lista1_q07.o zz_lista1_q10.o zz_lista1_q13.o zz_lista1_q15.o zz_lista1_q16.o zz_lista1_q17.o zz_prova1_q4.o
+LINKOBJ  = commands.o fa_impressao.o z_arv.o z_arv_AVL.o z_arv_AVL_ED.o z_arvED.o z_arvEncED.o z_fila.o z_filaED.o z_tabelaSequencial.o z_tabelaSequencialED.o zz_lista1_q03.o zz_lista1_q04.o zz_lista1_q05.o zz_lista1_q06.o zz_lista1_q07.o zz_lista1_q10.o zz_lista1_q13.o zz_lista1_q15.o zz_lista1_q16.o zz_lista1_q17.o zz_prova1_q4.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = DSProject-Parte8.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+commands.o: commands.c
+	$(CC) -c commands.c -o commands.o $(CFLAGS)
+
+fa_impressao.o: fa_impressao.c
+	$(CC) -c fa_impressao.c -o fa_impressao.o $(CFLAGS)
+
+z_arv.o: z_arv.c
+	$(CC) -c z_arv.c -o z_arv.o $(CFLAGS)
+
+z_arv_AVL.o: z_arv_AVL.c
+	$(CC) -c z_arv_AVL.c -o z_arv_AVL.o $(CFLAGS)
+
+z_arv_AVL_ED.o: z_arv_AVL_ED.c
+	$(CC) -c z_arv_AVL_ED.c -o z_arv_AVL_ED.o $(CFLAGS)
+
+z_arvED.o: z_arvED.c
+	$(CC) -c z_arvED.c -o z_arvED.o $(CFLAGS)
+
+z_arvEncED.o: z_arvEncED.c
+	$(CC) -c z_arvEncED.c -o z_arvEncED.o $(CFLAGS)
+
+z_fila.o: z_fila.c
+	$(CC) -c z_fila.c -o z_fila.o $(CFLAGS)
+
+z_filaED.o: z_filaED.c
+	$(CC) -c z_filaED.c -o z_filaED.o $(CFLAGS)
+
+z_tabelaSequencial.o: z_tabelaSequencial.c
+	$(CC) -c z_tabelaSequencial.c -o z_tabelaSequencial.o $(CFLAGS)
+
+z_tabelaSequencialED.o: z_tabelaSequencialED.c
+	$(CC) -c z_tabelaSequencialED.c -o z_tabelaSequencialED.o $(CFLAGS)
+
+zz_lista1_q03.o: zz_lista1_q03.c
+	$(CC) -c zz_lista1_q03.c -o zz_lista1_q03.o $(CFLAGS)
+
+zz_lista1_q04.o: zz_lista1_q04.c
+	$(CC) -c zz_lista1_q04.c -o zz_lista1_q04.o $(CFLAGS)
+
+zz_lista1_q05.o: zz_lista1_q05.c
+	$(CC) -c zz_lista1_q05.c -o zz_lista1_q05.o $(CFLAGS)
+
+zz_lista1_q06.o: zz_lista1_q06.c
+	$(CC) -c zz_lista1_q06.c -o zz_lista1_q06.o $(CFLAGS)
+
+zz_lista1_q07.o: zz_lista1_q07.c
+	$(CC) -c zz_lista1_q07.c -o zz_lista1_q07.o $(CFLAGS)
+
+zz_lista1_q10.o: zz_lista1_q10.c
+	$(CC) -c zz_lista1_q10.c -o zz_lista1_q10.o $(CFLAGS)
+
+zz_lista1_q13.o: zz_lista1_q13.c
+	$(CC) -c zz_lista1_q13.c -o zz_lista1_q13.o $(CFLAGS)
+
+zz_lista1_q15.o: zz_lista1_q15.c
+	$(CC) -c zz_lista1_q15.c -o zz_lista1_q15.o $(CFLAGS)
+
+zz_lista1_q16.o: zz_lista1_q16.c
+	$(CC) -c zz_lista1_q16.c -o zz_lista1_q16.o $(CFLAGS)
+
+zz_lista1_q17.o: zz_lista1_q17.c
+	$(CC) -c zz_lista1_q17.c -o zz_lista1_q17.o $(CFLAGS)
+
+zz_prova1_q4.o: zz_prova1_q4.c
+	$(CC) -c zz_prova1_q4.c -o zz_prova1_q4.o $(CFLAGS)
